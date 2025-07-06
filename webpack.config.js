@@ -10,6 +10,16 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         clean: true,
     },
+    devtool: "eval-source-map",
+    devServer: {
+        static: './dist',
+        hot: true,       // enable HMR (default)
+        client: {
+            reconnect: true,  // controls auto-reconnect
+            overlay: true     // show build errors on the browser
+        },
+        watchFiles: ['src/template.html'] // limit watching to your source files
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/template.html",
@@ -31,4 +41,4 @@ module.exports = {
             },
         ],
     },
-};
+}
