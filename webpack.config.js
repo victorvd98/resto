@@ -12,13 +12,7 @@ module.exports = {
     },
     devtool: "eval-source-map",
     devServer: {
-        static: './dist',
-        hot: true,       // enable HMR (default)
-        client: {
-            reconnect: true,  // controls auto-reconnect
-            overlay: true     // show build errors on the browser
-        },
-        watchFiles: ['src/template.html'] // limit watching to your source files
+        watchFiles: ['src/template.html']
     },
     plugins: [
         new HtmlWebpackPlugin({
