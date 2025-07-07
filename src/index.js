@@ -1,7 +1,20 @@
-console.log('Hello, World!');
+import { home } from './home.js';
+import { menu } from './menu.js';
+import { contact } from './contact.js';
 
-document.querySelector('#content').innerHTML = `
-    <h1>Hello, World!</h1>
-    <h2>This is my shitty restaurant homepage</h2>
-    <p>Welcome to my restaurant! We serve the best food in town.</p>
-    `
+
+const homeButton = document.querySelector('#home');
+homeButton.addEventListener('click', () => {
+    home();
+});
+
+const aboutButton = document.querySelector('#menu');
+aboutButton.addEventListener('click', () => {
+    menu();
+});
+
+const contactButton = document.querySelector('#contact');
+contactButton.addEventListener('click', () => {
+    contact();
+});
+
